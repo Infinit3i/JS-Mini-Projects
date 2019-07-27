@@ -1,6 +1,15 @@
 # todo-vue
 
-> A Vue.js project
+> todo CRUD application
+
+# Learnt
+
+- How to create vue app
+- How to make buttons to remove elements
+- use v-if & v-else in vue
+- use v-for loops
+- select all items in a list based on filter
+- using filter
 
 ## Build Setup
 
@@ -19,3 +28,10 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+
+Great api for looking up what you want on craiglists fast and easy
+
+
