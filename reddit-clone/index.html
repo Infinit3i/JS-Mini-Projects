@@ -72,12 +72,16 @@
         console.log(error)
       })
 
+    if (element.data.thumbnail = '') {
+      delete element.data.thumbnail
+    }
     function renderPosts(posts) {
       posts.forEach(element => {
         document.getElementById('posts').innerHTML = document.getElementById('posts').innerHTML +
         `<li class="list-group-item d-flex align-items-center">
           <img src="${element.data.thumbnail}" alt="thumb" class="thumbnail">
-          <div>${element.data.title}</div>
+          <h2>${element.data.title}</h2>
+          <p>${element.data.selftext}</p>
         </li>`
       })
     }
