@@ -9,7 +9,11 @@
 - use v-if & v-else in vue
 - use v-for loops
 - select all items in a list based on filter
-- using filter
+- Use filter
+- Use forEach
+- Understand Methods, and Computed
+- Use EventBus
+- modularize components
 
 ## Build Setup
 
@@ -28,10 +32,3 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-
-
-
-Great api for looking up what you want on craiglists fast and easy
-
-
