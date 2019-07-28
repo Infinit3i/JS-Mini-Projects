@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Reddit Clone for aww</title>
+  <title>Reddit Clone</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <style>
     body {
@@ -16,10 +16,10 @@
       background-color: #eee;
     }
     .thumbnail {
-      width: 60px;
-      height: 60px;
-      border-radius: 30px;
-      margin-right: 16px;
+      width: 200px;
+      height: 200px;
+      border-radius: 100px;
+      margin-right: 40px;
     }
   </style>
 </head>
@@ -35,7 +35,8 @@
     const { remote } = require('electron')
     const { BrowserWindow } = remote
     let posts = []
-    axios.get('https://reddit.com/r/aww.json')
+    
+    axios.get('https://reddit.com/r/bouldering.json')
       .then(response => {
         posts = response.data.data.children
         this.renderPosts(posts)
@@ -43,6 +44,34 @@
       .catch(error => {
         console.log(error)
       })
+
+      axios.get('https://reddit.com/r/climbing.json')
+      .then(response => {
+        posts = response.data.data.children
+        this.renderPosts(posts)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
+      axios.get('https://reddit.com/r/analog.json')
+      .then(response => {
+        posts = response.data.data.children
+        this.renderPosts(posts)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
+      axios.get('https://reddit.com/r/Rainbow6.json')
+      .then(response => {
+        posts = response.data.data.children
+        this.renderPosts(posts)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
     function renderPosts(posts) {
       posts.forEach(element => {
         document.getElementById('posts').innerHTML = document.getElementById('posts').innerHTML +
@@ -52,6 +81,7 @@
         </li>`
       })
     }
+
   </script>
 </body>
 
