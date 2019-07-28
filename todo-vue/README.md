@@ -32,3 +32,5 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+https://www.youtube.com/watch?v=yrCGcnn4_RU&list=PLEhEHUEU3x5q-xB1On4CsLPts0-rZ9oos&index=4
