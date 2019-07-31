@@ -114,13 +114,14 @@
             <h4 class="post-subreddit"><b>${element.data.subreddit}</b></h4>
             <img src="${element.data.thumbnail}" alt="thumb" class="thumbnail">
               <div class="posterInfo">
-                <button class="flex-item"> ${element.data.name}</button>
+                <button class="flex-item"> ${element.data.author}</button>
                 <button class="flex-item"> <i class="fa fa-thumbs-up"></i> ${element.data.ups}</button>
               </div>
           </div>
           <div>
             <h2 class="poster-text">${element.data.title}</h2>
             <p class="poster-text">${element.data.selftext}</p>
+            <p class="poster-text"><a href="https://www.reddit.com${element.data.permalink}" target="_blank">Post</a></p>
           </div>
         </li>`
       })
