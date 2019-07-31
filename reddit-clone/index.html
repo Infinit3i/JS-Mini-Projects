@@ -112,7 +112,7 @@
         `<li class="list-group-item d-flex">
           <div class="left-block">
             <h4 class="post-subreddit"><b>${element.data.subreddit}</b></h4>
-            <img src="${element.data.thumbnail}" alt="thumb" class="thumbnail">
+            <a href="https://www.reddit.com${element.data.permalink}" target="_blank"><img src="${element.data.thumbnail}" alt="thumb" class="thumbnail"></a>
               <div class="posterInfo">
                 <button class="flex-item"> ${element.data.author}</button>
                 <button class="flex-item"> <i class="fa fa-thumbs-up"></i> ${element.data.ups}</button>
