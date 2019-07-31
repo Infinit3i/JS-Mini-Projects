@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Reddit Clone</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     body {
       padding: 24px;
@@ -18,9 +19,39 @@
     .thumbnail {
       width: 200px;
       height: 200px;
-      border-radius: 100px;
-      margin-right: 40px;
+      border-radius: 50px;
+      border: 3px solid black;
+      margin: 20px;
     }
+
+    .posterInfo {
+      justify-content: center;
+      margin: 10px;
+      display: flex;
+    }
+
+    .flex-item {
+      margin: 4px;
+      display: inline;
+    }
+
+    .post-subreddit {
+      background-color: #d0d0d0;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .left-block {
+      min-height: 200px;
+      min-width: 250px;
+      background-color: lightblue;
+      align-items: center;
+    }
+
+    .poster-text {
+      margin: 30px;
+    }
+
   </style>
 </head>
 
@@ -78,10 +109,19 @@
     function renderPosts(posts) {
       posts.forEach(element => {
         document.getElementById('posts').innerHTML = document.getElementById('posts').innerHTML +
-        `<li class="list-group-item d-flex align-items-center">
-          <img src="${element.data.thumbnail}" alt="thumb" class="thumbnail">
-          <h2>${element.data.title}</h2>
-          <p>${element.data.selftext}</p>
+        `<li class="list-group-item d-flex">
+          <div class="left-block">
+            <h4 class="post-subreddit"><b>${element.data.subreddit}</b></h4>
+            <img src="${element.data.thumbnail}" alt="thumb" class="thumbnail">
+              <div class="posterInfo">
+                <button class="flex-item"> ${element.data.name}</button>
+                <button class="flex-item"> <i class="fa fa-thumbs-up"></i> ${element.data.ups}</button>
+              </div>
+          </div>
+          <div>
+            <h2 class="poster-text">${element.data.title}</h2>
+            <p class="poster-text">${element.data.selftext}</p>
+          </div>
         </li>`
       })
     }
