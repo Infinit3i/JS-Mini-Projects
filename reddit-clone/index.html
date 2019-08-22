@@ -17,8 +17,8 @@
       background-color: #eee;
     }
     .thumbnail {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       border-radius: 50px;
       border: 3px solid black;
       margin: 20px;
@@ -42,8 +42,8 @@
     }
 
     .left-block {
-      min-height: 200px;
-      min-width: 250px;
+      min-height: 400px;
+      min-width: 400px;
       background-color: lightblue;
       align-items: center;
     }
@@ -106,6 +106,7 @@
     if (element.data.thumbnail = '') {
       delete element.data.thumbnail
     }
+
     function renderPosts(posts) {
       posts.forEach(element => {
         document.getElementById('posts').innerHTML = document.getElementById('posts').innerHTML +
@@ -115,6 +116,7 @@
             <a href="https://www.reddit.com${element.data.permalink}" target="_blank"><img src="${element.data.thumbnail}" alt="thumb" class="thumbnail"></a>
               <div class="posterInfo">
                 <button class="flex-item"> ${element.data.author}</button>
+                <button class="flex-item"><a href="https://www.reddit.com${element.data.permalink}" target="_blank">${element.data.post_hint}</a></button>
                 <button class="flex-item"> <i class="fa fa-thumbs-up"></i> ${element.data.ups}</button>
               </div>
           </div>
