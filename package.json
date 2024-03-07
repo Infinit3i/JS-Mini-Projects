@@ -1,0 +1,15 @@
+{
+  "name": "meganmillion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "megamillion.js",
+  "dependencies": {
+    "nodemon": "^3.1.0",
+    "puppeteer": "^22.4.0"
+  },
+  "scripts": {
+    "start": "nodemon megamillion.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
